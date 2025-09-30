@@ -1,0 +1,15 @@
+#object-item{
+    flex: 1 1 200px;
+    min-width: 10%;
+    max-width: 20%;
+    padding: 2rem;
+    border-radius: 6px;
+    background-color: #9192bc;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    color: rgb(233, 228, 228);
+    text-align: center;
+    width: 10%;
+    height: 80%;
+}
+
+

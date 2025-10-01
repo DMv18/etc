@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import './App.css';
-import data from './components/Item_Product/data.js';
+import data from './components/Item_Product/data.json';
 import ItemProduct from './components/Item_Product/index.jsx';
 
 
 function App() {
+  data.lenght 
   if(data.length === 0){
     return <h2>No hay productos</h2>
   }
@@ -14,218 +15,13 @@ function App() {
       <main>
         <h2>Welcome to React</h2>
         <section id="container-product">
-          <ItemProduct title={data[0].title} description={data[0].description}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[1]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/><ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
-          <ItemProduct {...data[0]}/>
+          {data.map((item, index) => (
+            <ItemProduct key={index} {...item} />
+          ))}
         </section>
       </main>
     </>
   )
 }
 
-export default App;
+export default App;      

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "p0-1",
+    "title": "UltraPhone X",
+    "description": "High-performance smartphone with 108MP camera.",
+    "img": ""
+  },
+  {
+    "id": "p0-2",
+    "title": "SmartHome Hub",
+    "description": "Control all your smart devices from one place.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-3",
+    "title": "EcoSpeaker",
+    "description": "Portable speaker with surround sound and long-lasting battery.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-4",
+    "title": "WorkMate Pro",
+    "description": "Ultralight laptop ideal for productivity and travel.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-5",
+    "title": "PixelLens Camera",
+    "description": "Digital camera with 30x optical zoom and 4K recording.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-6",
+    "title": "SpeedDrive SSD",
+    "description": "Ultra-fast storage for heavy file transfers.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-7",
+    "title": "CloudSync Pro",
+    "description": "Automatic cloud backup service with encryption.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-8",
+    "title": "ZenKeyboard",
+    "description": "Silent mechanical keyboard with RGB backlighting.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-9",
+    "title": "VisionVR",
+    "description": "Immersive virtual reality glasses for gaming and movies.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-10",
+    "title": "FlexTablet 12",
+    "description": "Flexible tablet with OLED screen and smart pen.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-11",
+    "title": "TrackFit Band",
+    "description": "Smart band with 24/7 activity monitoring.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-12",
+    "title": "AirNet Router",
+    "description": "Wi-Fi 6 router for stable and fast home connection.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-13",
+    "title": "GameBox Mini",
+    "description": "Portable gaming console with 500 classic titles included.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-14",
+    "title": "PhotoFix Studio",
+    "description": "Photo editing software with AI for instant touch-ups.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-15",
+    "title": "NanoDrone X",
+    "description": "Mini drone with HD camera and gesture control.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-16",
+    "title": "ThermoMug Smart",
+    "description": "Smart mug that keeps your drink at the ideal temperature.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-17",
+    "title": "SecureVault USB",
+    "description": "USB with biometric encryption for maximum security.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-18",
+    "title": "SoundBuds Pro",
+    "description": "Wireless earbuds with active noise cancellation.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-19",
+    "title": "CodeLab IDE",
+    "description": "Modern development environment with multi-language support.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-20",
+    "title": "AutoCharge Pad",
+    "description": "Fast wireless charger with anti-slip technology.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-21",
+    "title": "PrintGo Wireless",
+    "description": "Portable printer with Wi-Fi and Bluetooth connectivity.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-22",
+    "title": "BrightLamp Touch",
+    "description": "Touch LED lamp with brightness and color control.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-23",
+    "title": "DocuScan Mini",
+    "description": "Portable document scanner with USB-C connection.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-24",
+    "title": "CloudBook Air",
+    "description": "Lightweight notebook optimized for cloud work.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-25",
+    "title": "CleanBot Mini",
+    "description": "Smart vacuum robot for small spaces.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-26",
+    "title": "PowerMax Bank",
+    "description": "20,000 mAh external battery with fast charging.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-27",
+    "title": "LiveStream Cam",
+    "description": "HD streaming camera with autofocus and microphone.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-28",
+    "title": "NoteSync App",
+    "description": "Note-taking app with real-time synchronization.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-29",
+    "title": "SmartTag GPS",
+    "description": "Smart tracker with real-time location tracking.",
+    "img": "/vite.svg"
+  },
+  {
+    "id": "p0-30",
+    "title": "FocusPad",
+    "description": "Digital notepad for handwriting and PDF export.",
+    "img": "/vite.svg"
+  }
+]

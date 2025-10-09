@@ -1,0 +1,158 @@
+.tablero{
+    padding: 2rem;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.contenedor-juego{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2%;
+    flex-direction: row;
+    
+}
+
+.tablero-contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1%;
+}
+
+.turno{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 1%;
+}
+
+.tablero-button{
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+    cursor: pointer;
+    flex: 1 1 100px;
+}
+
+.tablero-button--reset{
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tablero-button--verde {
+    background-color: rgb(136, 242, 136);
+}
+
+.tablero-button--rojo {
+    background-color: rgb(255, 161, 161);
+}
+
+.tabla-puntaje{
+    border-collapse: collapse;
+
+}
+
+.tabla-puntaje th,
+.tabla-puntaje td{
+    border: 1px solid black;
+    padding: 8px 12px;
+    text-align: center;
+    gap: 1%;
+}
+
+.historial-contenedor{
+    background: #e7fcfc;
+    padding: 2rem;
+    display: grid;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    border-radius: 9px;
+    height: 400px;
+    width: 300px;
+}
+
+.historial-lista{
+    background: #f8ffff;
+    flex: 1 1 200px;
+    padding: 2rem;
+    border-radius: 6px;
+    scrollbar-color: transparent transparent; 
+    border-radius: 9px;
+    gap: 1%;
+    overflow-y: auto;  
+    max-height: 400px;
+    max-width: 300px;
+    height: 100%;
+    width: 100%;
+}
+
+.historial-lista-item {
+    border: 1px solid black;
+    padding: 8px 12px;
+    text-align: center;
+    gap: 1%;
+    margin-bottom: 1rem;
+}
+
+.tabla-historial{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.celda-tabla{
+    border: 1px solid black;
+    
+    text-align: center;
+    margin-bottom: 1px;
+    max-width: 23px;
+    max-height: 23px;
+    width: 23px;
+    height: 23px;
+}
+
+.input-nombre{
+    padding: 0.1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 120px;
+}
+
+.nombre-boton{
+    padding: 0.1rem 0.1rem;
+    width: 4rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-left: 0.5rem;
+}

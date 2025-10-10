@@ -1,9 +1,9 @@
-import './styles/tablero.css';
-import Button from './components/Button.jsx';
+import '@tic-tac/styles/tablero.css';
+import Button from '@tic-tac/components/Button.jsx';
 import { useState } from 'react';
-import Historial from './components/historial.jsx';
-import VerificarGanador from './components/ganador.jsx';
-import NombreJugador from './components/nombre_jugador.jsx';
+import Historial from '@tic-tac/components/historial.jsx';
+import VerificarGanador from '@tic-tac/components/ganador.jsx';
+import NombreJugador from '@tic-tac/components/nombre_jugador.jsx';
 
 export default function Tablero() {
     const [turno, setTurno] = useState(1);

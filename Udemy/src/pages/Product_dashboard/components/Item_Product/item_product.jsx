@@ -1,6 +1,6 @@
-import './item.css';
-import TabButton from '../TabButton/TabButton.jsx';
-import Img from '../Img/Img.jsx';
+import '@dashboard_products/styles/item.css';
+import TabButton from '../../../../components/TabButton/TabButton.jsx';
+import Img from '../../../../components/Img/Img.jsx';
 
 function ItemProduct({ item, onSelect }) {
 

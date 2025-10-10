@@ -1,16 +1,18 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import Header from './components/Header';
-import Tablero from './tic-tac/tablero.jsx'
+import Header from '@components/Header/Header.jsx';
 import App from './App.jsx';
-import ErrorBoundary from './Errors/ErrorBoundary.jsx'
-import './index.css';
+import ErrorBoundary from '@Errors/ErrorBoundary.jsx'
+import '@styles/Global.css';
+import { BrowserRouter } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ErrorBoundary>
-      <Header />
-      <Tablero/>
+      <BrowserRouter>
+        <Header />
+        <App />
+      </BrowserRouter>
     </ErrorBoundary>
   </StrictMode>,
 )

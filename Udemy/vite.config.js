@@ -7,6 +7,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@public': '/public',
+      '@home': '/src/pages/Home',
       '@components': '/src/components',
       '@dashboard_products': '/src/pages/Product_dashboard',
       '@tic-tac': '/src/pages/tic-tac',

@@ -1,0 +1,20 @@
+.Panel-identificacion {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
+    align-items: center;
+    overflow: hidden;
+}
+.campo-identificacion {
+    width: 100%;
+    padding: 2%;
+    margin: 5px 0;
+    border-radius: 3px;
+    gap: 1rem;
+    box-sizing: border-box;
+}

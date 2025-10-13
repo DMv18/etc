@@ -27,7 +27,9 @@ export default function DashBoard_Products(){
 
         {itemSeleccionado && (
             <div id="container-product">
-            <Img id="container-product" img={itemSeleccionado.img} alt={itemSeleccionado.title} />
+            <div id='img-container'>
+                <Img img={itemSeleccionado.img} alt={itemSeleccionado.title} />
+            </div>
             <h3 id='container-product'>{itemSeleccionado.title}</h3>
             <p id="container-product">{itemSeleccionado.description}</p>
             </div>

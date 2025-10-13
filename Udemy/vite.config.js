@@ -7,15 +7,15 @@ export default defineConfig({
   resolve: {
     alias: {
       '@public': '/public',
-      '@home': '/src/pages/Home',
+      '@home': '/src/App/pages/Home',
       '@components': '/src/components',
-      '@dashboard_products': '/src/pages/Product_dashboard',
-      '@tic-tac': '/src/pages/tic-tac',
-      '@Errors': '/src/pages/Errors',
+      '@dashboard_products': '/src/App/pages/Product_dashboard',
+      '@tic-tac': '/src/App/pages/tic-tac',
+      '@Errors': '/src/App/Errors',
       '@data': '/src/data',
-      '@routes': '/src/pages/Routes',
+      '@routes': '/src/App/Routes',
       '@styles': '/src/styles',
-      '@user': '/src/pages/user',
+      '@user': '/src/App/pages/user',
     }
   }
 })

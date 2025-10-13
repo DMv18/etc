@@ -33,7 +33,7 @@ export default function Register() {
             </div>
             <button type="submit">Registrarse</button>
 
-            <p>Ya tiene cuenta? <a href="/">Iniciar sesión</a></p>
+            <p>Ya tiene cuenta? <a href="/login">Iniciar sesión</a></p>
         </form>
         
     </>)

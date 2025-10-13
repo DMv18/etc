@@ -1,15 +1,13 @@
 import '@dashboard_products/styles/item.css';
-import TabButton from '../../../../components/TabButton/TabButton.jsx';
-import Img from '../../../../components/Img/Img.jsx';
+import TabButton from '@components/TabButton/TabButton.jsx';
+import Img from '@components/Img/Img.jsx';
 
 function ItemProduct({ item, onSelect }) {
 
-
-  
   function handleSelect(action) {
     console.log("Item selected:", action, item);
     if (onSelect) {
-      onSelect(action, item); // Mando los datos a App
+      onSelect(action, item); 
     }
   }
 

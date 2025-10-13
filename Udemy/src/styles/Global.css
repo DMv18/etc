@@ -14,12 +14,12 @@ body, #root{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: #ffffff;
+    background: #f0f1f8;
 }
 
 header{
     width: 100%;
-    background: #1e293b;
+    background: #0e0723;
     color: #ffffff;
     padding: 1rem 2rem;
     position: sticky;
@@ -28,6 +28,7 @@ header{
     text-align: center;
     flex-direction: row;
     display: flex;
+    justify-content: space-between;
 }
 
 .header-tabs{
@@ -45,19 +46,43 @@ header{
     font-weight: 500;
 }
 
+.header-tabs-user{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: right;
+}
+
 main{
     flex: 1;
     padding: 2rem;
     width: 100%;
-    background: #f4f6f9;
 }
 
 footer{
     width:100%;
-    background: #1e293b;
+    background: #0e0723;
     color: #ffffff;
     text-align: center;
     padding: 1rem;
     margin-top: auto;
 }
 
+button{
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: rgb(92, 41, 187);
+    border: 2px solid rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+input{
+    padding: 0.1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+}

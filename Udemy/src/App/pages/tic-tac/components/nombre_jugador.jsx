@@ -6,7 +6,7 @@ export default function NombreJugador(){
 
 
     return(<>
-        <input className="input-nombre" disabled={estado} type="text" />
+        <input disabled={estado} type="text" />
         <button className="nombre-boton" onClick={() => setEstado(!estado)}>{boton}</button>
     </>);
 }

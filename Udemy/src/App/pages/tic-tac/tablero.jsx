@@ -29,7 +29,7 @@ export default function Tablero() {
     return (
         <>
             <div className="tablero-contenedor">
-                <h2 className="turno">Ronda N°: {ronda}   el turno es de: <p className="tablero-button--reset">{turno % 2 === 0 ? "X" : "O"}</p></h2>
+                <h2 className="turno">Ronda N°: {ronda}   el turno es de: <p>{turno % 2 === 0 ? "X" : "O"}</p></h2>
             </div>
 
 
@@ -53,7 +53,7 @@ export default function Tablero() {
                             </tr>
                             <tr>
                                 <td>
-                                    <button className="tablero-button--reset" onClick={() => {
+                                    <button onClick={() => {
                                         setValores(Array(9).fill(null));
                                         setGanador(false);
                                         setRonda(1);
@@ -63,7 +63,7 @@ export default function Tablero() {
                                     }}>Reset</button>
                                 </td>
                                 <td>
-                                    <button className="tablero-button--reset" onClick={() => {
+                                    <button onClick={() => {
                                         setValores(Array(9).fill(null));
                                         setGanador(false);
                                         setRonda(ronda+1);

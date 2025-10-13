@@ -12,6 +12,10 @@ function Header(){
                 <a className="header-tabs-a" onClick={()=>{navigate('/tic-tac-toe')}}>Tic-Tac-Toe</a>
                 <a className="header-tabs-a" onClick={()=>{navigate('/products')}}>Products</a>
             </div>
+            <div className="header-tabs-user">
+                <a className="header-tabs-a" onClick={()=>{navigate('/login')}}>Login</a>
+                <a className="header-tabs-a" onClick={()=>{navigate('/register')}}>Register</a>
+            </div>
         </header>
     );
 }

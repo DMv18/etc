@@ -21,7 +21,7 @@ export default function Register() {
             <h1>Registrarse</h1>
             <div className="campo-identificacion">
                 <h4>Correo:</h4>
-                <input type="email" value={email} placeholder="email" onChange={(e) => setEmail(e.target.value)} />
+                <input className="input_correo" type="email" value={email} placeholder="email" onChange={(e) => setEmail(e.target.value)} />
             </div>
 
             <div className="campo-identificacion">

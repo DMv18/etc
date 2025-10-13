@@ -13,7 +13,6 @@ export default function DashBoard_Products(){
         return <h2>No hay productos</h2>
     }
 
-    // Función que recibe datos desde el hijo
     function manejarSeleccion(action, item) {
         console.log('Datos recibidos en App:', action, item);
         setItemSeleccionado(item);
@@ -25,7 +24,6 @@ export default function DashBoard_Products(){
         <button onClick={() => setStyleMe(StyleMe === 'h2Change1' ? 'h2Change2' : 'h2Change1')}>
             Change
         </button>
-
 
         {itemSeleccionado && (
             <div id="container-product">

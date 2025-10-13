@@ -28,7 +28,7 @@ export default function Login() {
       <h1>Iniciar Sesión</h1>
       <div className="campo-identificacion">
         <h4>Correo:</h4>
-        <input type="email" value={email} placeholder="abc123@ejemplo.com" onChange={(e) => setEmail(e.target.value)} />
+        <input className="input_correo" type="email" value={email} placeholder="abc123@ejemplo.com" onChange={(e) => setEmail(e.target.value)} />
       </div>
 
       <div className="campo-identificacion">

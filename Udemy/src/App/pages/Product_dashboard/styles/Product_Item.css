@@ -1,5 +1,5 @@
 #container-product{
-    background-color: #b7c7e2;
+    background-color: #4a7ed63f;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -18,4 +18,47 @@
 
 .h2Change2 {
     color: green;
+}
+
+#object-item{
+    flex: 1 1 200px;
+    padding: 2rem;
+    border-radius: 6px;
+    background-color: #c4c6f6dd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+#object-item .img-container img{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 1rem;
+    background-color: rgb(243, 234, 234);
+    background-size: contain;
+    background-repeat: no-repeat;      
+    background-position: center; 
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    padding: 0.5rem;
+}
+
+#object-item .title-container{
+    margin-bottom: 1rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+#object-item .description-container{
+    text-align:start;
+    margin-bottom: 1rem;
+    height: 60px;
+    overflow: scroll;
+    text-overflow: ellipsis;
+    scrollbar-color: transparent transparent; 
+}
+
+#object-item .menu-buttons{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
 }

@@ -18,3 +18,22 @@
     gap: 1rem;
     box-sizing: border-box;
 }
+
+.input_contrasena {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    gap: 1rem;
+}
+
+.input_correo {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+    box-sizing: border-box;
+}

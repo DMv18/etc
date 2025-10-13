@@ -9,10 +9,12 @@ export default function Input_contrasena({children, value, onChange}) {
     return(
         <>
             <h4>{children}</h4>
-            <input type={showPassword ? "text" : "password"} value={value} onChange={onChange} placeholder="Contraseña" />
-            <span onClick={() => setShowPassword(!showPassword)}>
-                {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
-            </span>
+            <div className="input_contrasena">
+                <input type={showPassword ? "text" : "password"} value={value} onChange={onChange} placeholder="Contraseña" />
+                <span onClick={() => setShowPassword(!showPassword)}>
+                    {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+                </span>
+            </div>
         </>
     )
 }

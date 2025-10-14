@@ -41,6 +41,7 @@ function CardHistorial(partida){
                 ))
             }
         </div>
+        
     </>);
 }
                

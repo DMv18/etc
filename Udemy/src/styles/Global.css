@@ -100,3 +100,38 @@ input{
     box-shadow: 0 2px 8px rgba(0,0,0,0.4);
     padding: 0.5rem;
 }
+
+.blur-background {
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+    pointer-events: none;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .pokedex-contenido {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pokedex-parte-izquierda,
+  .pokedex-parte-derecha {
+    width: 100%;
+  }
+
+  .contenedor-informacion {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pantalla-imagen {
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+  .texto-informacion {
+    font-size: 1rem;
+  }
+}

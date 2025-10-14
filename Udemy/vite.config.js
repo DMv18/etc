@@ -16,6 +16,7 @@ export default defineConfig({
       '@routes': '/src/App/Routes',
       '@styles': '/src/styles',
       '@user': '/src/App/pages/user',
+      '@pokedex': '/src/App/pages/Pokedex',
     }
   }
 })

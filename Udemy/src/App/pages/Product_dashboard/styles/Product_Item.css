@@ -21,6 +21,7 @@
 }
 
 #object-item{
+    max-width: 14%;
     flex: 1 1 200px;
     padding: 2rem;
     border-radius: 6px;
@@ -58,6 +59,7 @@
 
 #object-item .menu-buttons{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     gap: 1rem;
 }

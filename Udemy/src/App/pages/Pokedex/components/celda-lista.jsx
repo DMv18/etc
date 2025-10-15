@@ -7,3 +7,6 @@ export default function CeldaLista({ numero, pokemon, setPokemonSeleccionado }) 
         </div>
     );
 }
+
+
+export { CeldaLista };

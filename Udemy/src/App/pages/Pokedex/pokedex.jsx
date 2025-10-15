@@ -2,7 +2,8 @@ import '@pokedex/styles/pokedex.css';
 import Img from '@components/Img/Img.jsx';
 import { PokemonClient } from 'pokenode-ts';
 import { useEffect, useState } from 'react';
-import CeldaLista from '@pokedex/components/celda-lista.jsx';
+import { CeldaLista } from '@pokedex/components/celda-lista.jsx';
+import Buscador from '@components/Buscador/Buscador.jsx';
 
 export default function Pokedex() {
     const [listadoPokemons, setListadoPokemons] = useState([]);
@@ -17,15 +18,11 @@ export default function Pokedex() {
         };
 
         fetchPokemons();
-
-        if(!pokemon){
-            setPokemonSeleccionado({ name: 'bulbasaur' });
-        }
     }, []);
 
     useEffect(() => {
         const fetchPokemon = async () => {
-            if (!pokemonSeleccionado || pokemonSeleccionado.name.trim() === "") return;
+            if (!pokemonSeleccionado || !pokemonSeleccionado.name) return;
             const api = new PokemonClient({ logs: true });
             const data = await api.getPokemonByName(pokemonSeleccionado.name);
             setPokemon(data);
@@ -38,7 +35,11 @@ export default function Pokedex() {
         <div className="pokedex-container">
             <div className="pokedex-encabezado">
                 <h2>Mi Pokédex</h2>
-                <input type="text" placeholder="Buscar Pokémon..." onChange={(e) => setPokemonSeleccionado({ name: e.target.value })} />
+                <Buscador
+                    lista={listadoPokemons}
+                    onSeleccionar={(pokemon) => setPokemonSeleccionado(pokemon)}
+                    placeholder="Buscar Pokémon..."
+                />
             </div>
 
             <div className="pokedex-contenido">
@@ -54,7 +55,9 @@ export default function Pokedex() {
                     <div className="contenedor-informacion">
                         <h4 className="texto-informacion">
                             {
-                                pokemon?.types[1] ? (pokemon?.types[0]?.type?.name + ' | ' + pokemon?.types[1]?.type?.name) : (pokemon?.types[0]?.type?.name ?? 'Cargando...')
+                                pokemon?.types[1]
+                                    ? `${pokemon?.types[0]?.type?.name} | ${pokemon?.types[1]?.type?.name}`
+                                    : `${pokemon?.types[0]?.type?.name ?? 'Cargando...'}`
                             }
                         </h4>
                     </div>
@@ -80,7 +83,5 @@ export default function Pokedex() {
 function Sprite({ pokemon }) {
     if (!pokemon || !pokemon.sprites) return <div>Cargando sprite...</div>;
 
-    return (
-        <Img img={pokemon.sprites?.front_default} alt={pokemon.name} />
-    );
+    return <Img img={pokemon.sprites?.front_default} alt={pokemon.name} />;
 }

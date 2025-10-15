@@ -1,5 +1,3 @@
-import Img from '@components/Img/Img.jsx';
-
 export default function CeldaLista({ numero, pokemon, setPokemonSeleccionado }) {
     return (
         <div className="celda-lista" onClick={() => setPokemonSeleccionado(pokemon)}>

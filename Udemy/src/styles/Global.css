@@ -144,6 +144,14 @@ input{
     list-style: none;
 }
 
+.Paginador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
 
 @media (max-width: 768px) {
   .pokedex-contenido {

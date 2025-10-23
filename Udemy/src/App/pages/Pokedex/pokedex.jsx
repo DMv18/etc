@@ -4,13 +4,18 @@ import { PokemonClient } from 'pokenode-ts';
 import { useEffect, useState } from 'react';
 import { CeldaLista } from '@pokedex/components/celda-lista.jsx';
 import Buscador from '@components/Buscador/Buscador.jsx';
+import Paginador from '@components/Paginador/Paginador.jsx';
+import RadarPentagonChart from '@components/RadarPentagonChart/RadarPentagonChart.jsx';
 
 export default function Pokedex() {
     const [listadoPokemons, setListadoPokemons] = useState([]);
-    const [pokemonSeleccionado, setPokemonSeleccionado] = useState(null);
-    const [pokemon, setPokemon] = useState(null);
+    const [pokemonSeleccionado, setPokemonSeleccionado] = useState({ name: 'bulbasaur' });
+    const [pokemon, setPokemon] = useState({ name: 'bulbasaur' });
+    
 
     useEffect(() => {
+        if (listadoPokemons.length > 0) return;
+
         const fetchPokemons = async () => {
             const api = new PokemonClient({ logs: true });
             const pokemons = await api.listPokemons(0, 1302);
@@ -55,24 +60,46 @@ export default function Pokedex() {
                     <div className="contenedor-informacion">
                         <h4 className="texto-informacion">
                             {
-                                pokemon?.types[1]
-                                    ? `${pokemon?.types[0]?.type?.name} | ${pokemon?.types[1]?.type?.name}`
-                                    : `${pokemon?.types[0]?.type?.name ?? 'Cargando...'}`
+                                pokemon?.types?.[1]
+                                    ? `${pokemon?.types?.[0]?.type?.name} | ${pokemon?.types?.[1]?.type?.name}`
+                                    : `${pokemon?.types?.[0]?.type?.name ?? 'Cargando...'}`
                             }
                         </h4>
                     </div>
                 </div>
 
+                <div className='pokedex-parte-central'>
+                    <div className='texto-informacion'>
+                        {pokemon?.stats ? (
+                        <RadarPentagonChart
+                            labels={pokemon.stats.map((s) => s.stat.name)}
+                            datos={pokemon.stats.map((s) => s.base_stat)}
+                        />
+                        ) : (
+                        <p>Cargando estadísticas...</p>
+                        )}
+                    </div>
+                </div>
+
+
                 <div className="pokedex-parte-derecha">
                     <div className="listado-pokemons">
-                        {listadoPokemons.map((pokemon, index) => (
-                            <CeldaLista
-                                key={index}
-                                numero={index + 1}
-                                pokemon={pokemon}
-                                setPokemonSeleccionado={setPokemonSeleccionado}
-                            />
-                        ))}
+                        <Paginador
+                            listaObjetos={listadoPokemons}
+                            objetosPorPagina={1}
+                            render={(datos) => (
+                                <div className="grid">
+                                    {datos.map((poke, index) => (
+                                        <CeldaLista
+                                            key={index}
+                                            numero={index + 1}
+                                            pokemon={poke}
+                                            setPokemonSeleccionado={setPokemonSeleccionado}
+                                        />
+                                    ))}
+                                </div>
+                            )}
+                        />
                     </div>
                 </div>
             </div>
@@ -82,6 +109,9 @@ export default function Pokedex() {
 
 function Sprite({ pokemon }) {
     if (!pokemon || !pokemon.sprites) return <div>Cargando sprite...</div>;
-
-    return <Img img={pokemon.sprites?.front_default} alt={pokemon.name} />;
+    return<>
+        <Img img={pokemon.sprites.front_default} alt={pokemon.name} />
+        <Img img={pokemon.sprites.other.showdown.front_default} alt={pokemon.name} />
+        <Img img={pokemon.sprites.versions['generation-vii']['icons'].front_default} alt={pokemon.name} />
+    </>;
 }

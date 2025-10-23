@@ -84,10 +84,26 @@
     width: 30%;
 }
 
+.pokedex-parte-central{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 38%;
+    height: 100%;
+    background-color: rgb(233, 82, 82);
+    border: 5px solid rgb(170, 11, 11);
+    border-radius: 1rem;
+    align-items: center;
+    padding: 0.5rem 0 0.5rem 0;
+    gap: 1rem;
+}
+
 .pokedex-parte-derecha {
     display: flex;
-    flex-direction: row;
-    width: 50%;
+    flex-direction: column;
+    width: 30%;
     height: 100%;
     background-color: rgb(233, 82, 82);
     border: 5px solid rgb(170, 11, 11);
@@ -95,6 +111,7 @@
     align-items: center;
     padding: 1rem;
     gap: 1rem;
+    justify-content: center;
 }
 
 .contenedor-listado{

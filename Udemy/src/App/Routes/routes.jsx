@@ -8,15 +8,15 @@ import Pokedex from '@pokedex/pokedex.jsx';
 
 export default function Rutas(){
     return(
-        <main>
+        <main id="main">
             <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/login' element={<Login/>}/>
-            <Route path='/tic-tac-toe' element={<Tablero/>}/>
-            <Route path='/products' element={<DashBoard_Products/>}/>
-            <Route path='/register' element={<Register/>}/>
-            <Route path='/pokedex' element={<Pokedex/>}/>
-        </Routes>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/login' element={<Login/>}/>
+                <Route path='/tic-tac-toe' element={<Tablero/>}/>
+                <Route path='/products' element={<DashBoard_Products/>}/>
+                <Route path='/register' element={<Register/>}/>
+                <Route path='/pokedex' element={<Pokedex/>}/>
+            </Routes>
         </main>
     )
 }

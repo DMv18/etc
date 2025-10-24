@@ -36,7 +36,7 @@ const RadarPentagonChart = ({ labels = [], datos = [] }) => {
     },
   };
 
-  return <Radar data={data} options={options} />;
+  return <div className='grafico-pentagonal'><Radar data={data} options={options} /></div>;
 };
 
 export default RadarPentagonChart;

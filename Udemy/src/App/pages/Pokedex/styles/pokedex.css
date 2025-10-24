@@ -9,6 +9,13 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    width: min(1100px, 95%);
+    max-width: 1100px;
+    height: min(820px, 85vh);
+    max-height: 900px;
+    margin: 1.5rem auto;
+    box-sizing: border-box;
+
 }
 
 .pokedex-encabezado{
@@ -29,10 +36,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     border: 2px solid black;
     padding: 1rem;
-
+    flex: 1 1 auto; 
+    overflow: auto; 
 
     background-color: #f0f0f0;
     background-image:
@@ -91,7 +99,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     width: 38%;
-    height: 100%;
+    height: auto;
     background-color: rgb(233, 82, 82);
     border: 5px solid rgb(170, 11, 11);
     border-radius: 1rem;
@@ -104,7 +112,7 @@
     display: flex;
     flex-direction: column;
     width: 30%;
-    height: 100%;
+    height: auto;
     background-color: rgb(233, 82, 82);
     border: 5px solid rgb(170, 11, 11);
     border-radius: 1rem;
@@ -115,15 +123,13 @@
 }
 
 .contenedor-listado{
-    width: 20%;
-    max-height: 400px;
-    overflow-y: auto;
+    width: 100%;
 }
 
 .listado-pokemons {
     background-color: white;
     width: 100%;
-    max-height: 30rem; 
+    max-height: 40vh; 
     overflow-y: auto;
     display: flex;
     flex-direction: column;

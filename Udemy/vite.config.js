@@ -7,14 +7,15 @@ export default defineConfig({
   resolve: {
     alias: {
       '@public': '/public',
-      '@home': '/src/App/pages/Home',
       '@components': '/src/components',
+      '@data': '/src/data',
+      '@styles': '/src/styles',
+      '@hooks': '/src/hooks',
+      '@home': '/src/App/pages/Home',
       '@dashboard_products': '/src/App/pages/Product_dashboard',
       '@tic-tac': '/src/App/pages/tic-tac',
       '@Errors': '/src/App/Errors',
-      '@data': '/src/data',
       '@routes': '/src/App/Routes',
-      '@styles': '/src/styles',
       '@user': '/src/App/pages/user',
       '@pokedex': '/src/App/pages/Pokedex',
     }

@@ -6,11 +6,18 @@ import { CeldaLista } from '@pokedex/components/celda-lista.jsx';
 import Buscador from '@components/Buscador/Buscador.jsx';
 import Paginador from '@components/Paginador/Paginador.jsx';
 import RadarPentagonChart from '@components/RadarPentagonChart/RadarPentagonChart.jsx';
+import ImgGrupal from '@components/ImgGrupal/ImgGrupal.jsx';
+import useAdjustContent from '@hooks/useWindowSize/useAdjustContent.jsx';
 
 export default function Pokedex() {
     const [listadoPokemons, setListadoPokemons] = useState([]);
     const [pokemonSeleccionado, setPokemonSeleccionado] = useState({ name: 'bulbasaur' });
     const [pokemon, setPokemon] = useState({ name: 'bulbasaur' });
+
+    useAdjustContent({ contenedor: 'pokedex-container' });
+
+
+
     
 
     useEffect(() => {
@@ -86,13 +93,13 @@ export default function Pokedex() {
                     <div className="listado-pokemons">
                         <Paginador
                             listaObjetos={listadoPokemons}
-                            objetosPorPagina={1}
+                            objetosPorPagina={20}
                             render={(datos) => (
                                 <div className="grid">
                                     {datos.map((poke, index) => (
                                         <CeldaLista
                                             key={index}
-                                            numero={index + 1}
+                                            numero={listadoPokemons.indexOf(poke) + 1}
                                             pokemon={poke}
                                             setPokemonSeleccionado={setPokemonSeleccionado}
                                         />
@@ -110,8 +117,10 @@ export default function Pokedex() {
 function Sprite({ pokemon }) {
     if (!pokemon || !pokemon.sprites) return <div>Cargando sprite...</div>;
     return<>
-        <Img img={pokemon.sprites.front_default} alt={pokemon.name} />
-        <Img img={pokemon.sprites.other.showdown.front_default} alt={pokemon.name} />
-        <Img img={pokemon.sprites.versions['generation-vii']['icons'].front_default} alt={pokemon.name} />
+        <ImgGrupal imagenes={[
+            pokemon.sprites.other.showdown.front_default,
+            pokemon.sprites.front_default,
+            pokemon.sprites.versions['generation-vii']['icons'].front_default
+        ]} />
     </>;
 }

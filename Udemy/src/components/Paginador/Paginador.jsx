@@ -1,10 +1,10 @@
 import { useState, useMemo } from "react";
+import './Paginador.css';
 
-export default function Paginador({ listaObjetos, objetosPorPagina = 20, render}) {
+export default function Paginador({ listaObjetos = [], objetosPorPagina = 20, render }) {
     const [pagina, setPagina] = useState(1);
     const totalPaginas = Math.max(1, Math.ceil(listaObjetos.length / objetosPorPagina));
 
-    const [grupo, setGrupo] = useState([]);
     const totalPaginado = Math.max(objetosPorPagina, Math.ceil(listaObjetos.length / objetosPorPagina));
 
     const datosPaginados = useMemo(() => {
@@ -18,16 +18,14 @@ export default function Paginador({ listaObjetos, objetosPorPagina = 20, render}
         setPagina(paginaValida);
     }
 
-    return (
-        <>
-            {render(datosPaginados)}
-
-            <div className="Paginador">
-                
-                <button onClick={() => irA(pagina - objetosPorPagina)} disabled={pagina === 1}>Anterior</button>
-                <span>Página {pagina} de {totalPaginado}</span>
-                <button onClick={() => irA(pagina + objetosPorPagina)} disabled={pagina === totalPaginas}>Siguiente</button>
+    return (<>
+        <div className="Paginador-list" role="region" aria-live="polite">
+                {render(datosPaginados)}
             </div>
-        </>
+        <div className="Paginador-controls">
+                <button className="paginador-btn" onClick={() => irA(pagina - 1)} disabled={pagina === 1} aria-label="Página anterior">Anterior</button>
+                <span className="paginador-info" aria-live="polite">Página {pagina} de {totalPaginado}</span>
+                <button className="paginador-btn" onClick={() => irA(pagina + 1)} disabled={pagina === totalPaginas} aria-label="Página siguiente">Siguiente</button>
+            </div></>
     );
 }

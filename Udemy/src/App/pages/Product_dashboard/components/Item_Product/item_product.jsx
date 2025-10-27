@@ -1,35 +1,21 @@
-import TabButton from '@components/TabButton/TabButton.jsx';
 import Img from '@components/Img/Img.jsx';
 
-function ItemProduct({ item, onSelect }) {
+export default function ItemProduct({ item, onSelect }) {
+    return (
+        <article className="item-product" onClick={() => onSelect && onSelect('select', item)}>
+            <div className="img-container">
+                <Img img={item.img} alt={item.title} />
+            </div>
 
-  function handleSelect(action) {
-    console.log("Item selected:", action, item);
-    if (onSelect) {
-      onSelect(action, item); 
-    }
-  }
+            <div className="item-body">
+                <h3 className="item-title">{item.title}</h3>
+                <p className="item-desc">{item.description}</p>
+            </div>
 
-  return (
-    <section id="object-item">
-      <div className='img-container'>
-        <Img img={item.img} alt={item.title} />
-      </div>
-
-      <div className='title-container'>
-        <h3>{item.title}</h3>
-      </div>
-
-      <div className='description-container'>
-        <p>{item.description}</p>
-      </div>
-
-      <menu className='menu-buttons'>
-        <TabButton onSelect={() => handleSelect('add-to-cart')}>Add to the cart</TabButton>
-        <TabButton onSelect={() => handleSelect('see-more')}>See more</TabButton>
-      </menu>
-    </section>
-  );
+            <div className="actions">
+                <button type="button" className="btn btn-add">Add to the cart</button>
+                <button type="button" className="btn btn-see">See more</button>
+            </div>
+        </article>
+    );
 }
-
-export default ItemProduct;

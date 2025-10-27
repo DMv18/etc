@@ -1,41 +1,122 @@
 .Panel-identificacion {
     display: flex;
     flex-direction: column;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    margin: auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    gap: 1rem;
+    border: 1px solid #e0e0e0;
+    padding: 2.5rem;
+    border-radius: 12px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    gap: 1.5rem;
     align-items: center;
-    overflow: hidden;
-    width: 50%;
-    
+    background: white;
+    width: 100%;
+    max-width: 450px;
 }
+
+.Panel-identificacion h1 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+}
+
 .campo-identificacion {
     width: 100%;
-    padding: 2%;
-    margin: 5px 0;
-    border-radius: 3px;
-    gap: 1rem;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.campo-identificacion h4 {
+    color: #555;
+    font-weight: 500;
+    font-size: 0.95rem;
 }
 
 .input_contrasena {
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 0 10px;
-    box-sizing: border-box;
-    margin-top: 5px;
-    gap: 1rem;
+    position: relative;
+    margin-top: 0.25rem;
+}
+
+.input_contrasena input {
+    padding-right: 3rem;
+}
+
+.input_contrasena span {
+    position: absolute;
+    right: 0.75rem;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input_contrasena span:hover {
+    color: #333;
 }
 
 .input_correo {
-    margin-top: 5px;
-    display: flex;
-    align-items: center;
+    margin-top: 0.25rem;
     width: 100%;
+}
+
+.Panel-identificacion button {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.875rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.Panel-identificacion p {
+    text-align: center;
+    color: #666;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.Panel-identificacion a {
+    color: rgb(92, 41, 187);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.Panel-identificacion a:hover {
+    text-decoration: underline;
+    color: rgb(72, 31, 147);
+}
+
+@media (max-width: 768px) {
+    .Panel-identificacion {
+        padding: 2rem 1.5rem;
+        margin: 1rem auto;
+        width: 95%;
+    }
     
-    box-sizing: border-box;
+    .Panel-identificacion h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Panel-identificacion {
+        padding: 1.5rem 1rem;
+        margin: 0.5rem auto;
+        gap: 1rem;
+    }
+    
+    .Panel-identificacion h1 {
+        font-size: 1.25rem;
+    }
+    
+    .campo-identificacion h4 {
+        font-size: 0.9rem;
+    }
 }

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Input_contrasena from "@user/components/input_contrasena/input_contrasena.jsx"
 import data_user from '@data/data_user.json';
 import '@user/styles/user.css';
+import Layout from '@components/Layout/Layout.jsx';
 
 
 export default function Login() {
@@ -22,23 +23,24 @@ export default function Login() {
     }
   };
 
-  return(
-  <> 
-    <form  className="Panel-identificacion" onSubmit={handleSubmit}>
-      <h1>Iniciar Sesión</h1>
-      <div className="campo-identificacion">
-        <h4>Correo:</h4>
-        <input className="input_correo" type="email" value={email} placeholder="abc123@ejemplo.com" onChange={(e) => setEmail(e.target.value)} />
-      </div>
+  return (
+    <Layout>
+      <form  className="Panel-identificacion" onSubmit={handleSubmit}>
+        <h1>Iniciar Sesión</h1>
+        <div className="campo-identificacion">
+          <h4>Correo:</h4>
+          <input className="input_correo" type="email" value={email} placeholder="abc123@ejemplo.com" onChange={(e) => setEmail(e.target.value)} />
+        </div>
 
-      <div className="campo-identificacion">
-        <Input_contrasena value={password} onChange={(e) => setPassword(e.target.value)}>Contraseña:</Input_contrasena>
+        <div className="campo-identificacion">
+          <Input_contrasena value={password} onChange={(e) => setPassword(e.target.value)}>Contraseña:</Input_contrasena>
 
-      </div>
-      <button type="submit">Iniciar Sesión</button>
+        </div>
+        <button type="submit">Iniciar Sesión</button>
 
 
-      <p>No tiene cuenta? <a href="/register">Regístrate</a></p>
-    </form>
-  </>)
-}
+        <p>No tiene cuenta? <a href="/register">Regístrate</a></p>
+      </form>
+    </Layout>
+  );
+ }

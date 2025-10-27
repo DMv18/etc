@@ -1,22 +1,25 @@
-import {Routes, Route } from 'react-router-dom';
-import Home from '@home/home.jsx';
-import DashBoard_Products from '@dashboard_products/dashboard_products.jsx';
-import Tablero from "@tic-tac/tablero.jsx";
-import Login from '@user/login/login.jsx';
-import Register from '@user/register/register.jsx';
-import Pokedex from '@pokedex/pokedex.jsx';
+import React, { Suspense, lazy } from "react";
+import { Routes, Route } from "react-router-dom";
 
-export default function Rutas(){
-    return(
-        <main id="main">
+const Home = lazy(() => import("@home/home.jsx"));
+const Pokedex = lazy(() => import("@pokedex/pokedex.jsx"));
+const DashboardProducts = lazy(() => import("@dashboard_products/dashboard_products.jsx"));
+const Tablero = lazy(() => import("@tic-tac/tablero.jsx"));
+const Login = lazy(() => import("@user/login/login.jsx"));
+const Register = lazy(() => import("@user/register/register.jsx"));
+
+export default function AppRoutes() {
+    return (
+        <Suspense fallback={<div style={{padding:20}}>Cargando...</div>}>
             <Routes>
-                <Route path='/' element={<Home/>}/>
-                <Route path='/login' element={<Login/>}/>
-                <Route path='/tic-tac-toe' element={<Tablero/>}/>
-                <Route path='/products' element={<DashBoard_Products/>}/>
-                <Route path='/register' element={<Register/>}/>
-                <Route path='/pokedex' element={<Pokedex/>}/>
+                <Route path="/" element={<Home />} />
+                <Route path="/pokedex" element={<Pokedex />} />
+                <Route path="/dashboard/*" element={<DashboardProducts />} />
+                <Route path="/tablero" element={<Tablero />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="*" element={<Home />} />
             </Routes>
-        </main>
-    )
+        </Suspense>
+    );
 }

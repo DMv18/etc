@@ -1,6 +1,7 @@
 import { useState } from "react";
 import data_user from '@data/data_user.json';
 import Input_contrasena from "@user/components/input_contrasena/input_contrasena.jsx"
+import Layout from '@components/Layout/Layout.jsx';
 
 export default function Register() {
     const [email, setEmail] = useState("");
@@ -15,8 +16,8 @@ export default function Register() {
         console.log("Confirm Password:", confirmPassword);
     };
 
-    return(
-    <> 
+    return (
+    <Layout>
         <form  className="Panel-identificacion" onSubmit={handleSubmit}>
             <h1>Registrarse</h1>
             <div className="campo-identificacion">
@@ -35,6 +36,6 @@ export default function Register() {
 
             <p>Ya tiene cuenta? <a href="/login">Iniciar sesión</a></p>
         </form>
-        
-    </>)
+    </Layout>
+    )
 }

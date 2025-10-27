@@ -13,6 +13,11 @@ function Header(){
         window.location.replace("http://127.0.0.1:5500/index.html");
     }
 
+    function logout() {
+        localStorage.removeItem("user");
+        navigate('/login');
+    }
+
     function handleToggleMenu(e){
         setOpen(prevOpen => {
             const newOpen = !prevOpen;
@@ -68,14 +73,7 @@ function Header(){
                 <div className="header-left-group">
                     <div className="header-left">
                         <img className="logoHeader" onClick={() => navigate('/')} src={reactLogo} alt="Logo React" />
-                        <button
-                            ref={hamburgerRef}
-                            type="button" 
-                            className="hamburger" 
-                            aria-label="Toggle menu" 
-                            aria-expanded={open}
-                            onClick={handleToggleMenu}
-                        >
+                        <button ref={hamburgerRef} type="button" className="hamburger" aria-label="Toggle menu" aria-expanded={open} onClick={handleToggleMenu}>
                             <span className="bar" />
                             <span className="bar" />
                             <span className="bar" />
@@ -83,8 +81,8 @@ function Header(){
                     </div>
 
                     <div className="header-tabs" aria-hidden={open}>
-                        <Link className="header-tabs-a" to='/tablero'>Tic-Tac-Toe</Link>
                         <Link className="header-tabs-a" to='/dashboard'>Products</Link>
+                        <Link className="header-tabs-a" to='/tablero'>Tic-Tac-Toe</Link>
                         <Link className="header-tabs-a" to='/pokedex'>Pokedex</Link>
                     </div>
                 </div>
@@ -99,6 +97,7 @@ function Header(){
                     <div className="header-auth-links" aria-hidden={open}>
                         <Link className="header-tabs-a" to='/login'>Login</Link>
                         <Link className="header-tabs-a" to='/register'>Register</Link>
+                        <Link className="header-tabs-a" onClick={logout}>Logout</Link>
                     </div>
                 </div>
             </div>

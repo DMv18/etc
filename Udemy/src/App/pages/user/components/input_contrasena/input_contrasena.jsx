@@ -9,7 +9,7 @@ export default function Input_contrasena({ children, value, onChange, placeholde
         <div className="campo-identificacion">
             <h4>{children}</h4>
             <div className="input_contrasena">
-                <input type={showPassword ? "text" : "password"} value={value} onChange={onChange} placeholder={placeholder} className="password-input"/>
+                <input style={{width:'90%', margin: '1rem'}} type={showPassword ? "text" : "password"} value={value} onChange={onChange} placeholder={placeholder} className="password-input"/>
                 <span 
                     onClick={() => setShowPassword(!showPassword)} className="password-toggle" aria-label={showPassword ? "Ocultar contraseña" : "Mostrar contraseña"} role="button" tabIndex={0}>
                     {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}

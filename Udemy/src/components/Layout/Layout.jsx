@@ -1,4 +1,3 @@
-import React from 'react';
 import './Layout.css';
 
 export default function Layout({ children, className = '', gap = '1rem' }) {

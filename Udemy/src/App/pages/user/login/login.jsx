@@ -1,23 +1,25 @@
-import { useState } from "react"
-import { useNavigate } from 'react-router-dom';
-import Input_contrasena from "@user/components/input_contrasena/input_contrasena.jsx"
-import data_user from '@data/data_user.json';
-import '@user/styles/user.css';
-import Layout from '@components/Layout/Layout.jsx';
-
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Input_contrasena from "@user/components/input_contrasena/input_contrasena.jsx";
+import Layout from "@components/Layout/Layout.jsx";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [data, setData] = useState(data_user);
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const user = data.find(user => user.email === email && user.password === password);
-    if (user) {
+    const resp = await fetch("http://localhost:3000/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password })
+    });
+    const result = await resp.json();
+    if(result.success){
+      localStorage.setItem("user", JSON.stringify(result.user));
       alert("Inicio de sesión exitoso");
-      navigate('/');
+      navigate("/");
     } else {
       alert("Correo o contraseña incorrectos");
     }
@@ -25,22 +27,17 @@ export default function Login() {
 
   return (
     <Layout>
-      <form  className="Panel-identificacion" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="Panel-identificacion">
         <h1>Iniciar Sesión</h1>
         <div className="campo-identificacion">
           <h4>Correo:</h4>
-          <input className="input_correo" type="email" value={email} placeholder="abc123@ejemplo.com" onChange={(e) => setEmail(e.target.value)} />
+          <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
         </div>
-
         <div className="campo-identificacion">
-          <Input_contrasena value={password} onChange={(e) => setPassword(e.target.value)}>Contraseña:</Input_contrasena>
-
+          <Input_contrasena value={password} onChange={e => setPassword(e.target.value)}>Contraseña:</Input_contrasena>
         </div>
         <button type="submit">Iniciar Sesión</button>
-
-
-        <p>No tiene cuenta? <a href="/register">Regístrate</a></p>
       </form>
     </Layout>
   );
- }
+}

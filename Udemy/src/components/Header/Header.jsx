@@ -2,20 +2,22 @@ import reactLogo from "@public/react.svg";
 import { useNavigate, Link } from 'react-router-dom';
 import './Header.css';
 import { useState, useEffect, useRef } from 'react';
+import { useAuthStore } from '@hooks/store/useAuthStore';
 
 function Header(){
     const navigate = useNavigate();
     const [open, setOpen] = useState(false);
     const menuRef = useRef(null);
     const hamburgerRef = useRef(null);
+    const logout = useAuthStore((state) => state.logout);
 
     function ToJS() {
         window.location.replace("http://127.0.0.1:5500/index.html");
     }
 
-    function logout() {
-        localStorage.removeItem("user");
-        navigate('/login');
+    function Authlogout() {
+        logout();
+        navigate('/');
     }
 
     function handleToggleMenu(e){
@@ -97,7 +99,7 @@ function Header(){
                     <div className="header-auth-links" aria-hidden={open}>
                         <Link className="header-tabs-a" to='/login'>Login</Link>
                         <Link className="header-tabs-a" to='/register'>Register</Link>
-                        <Link className="header-tabs-a" onClick={logout}>Logout</Link>
+                        <Link className="header-tabs-a" onClick={Authlogout}>Logout</Link>
                     </div>
                 </div>
             </div>

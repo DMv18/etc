@@ -14,18 +14,10 @@ export default function Register() {
       return;
     }
 
-    const respUsers = await fetch("http://localhost:3000/users");
-    const users = await respUsers.json();
-    if(users.find(u => u.email === email)){
-      alert("Usuario ya registrado");
-      return;
-    }
-
-    const newUser = { id: users.length+1, email, password };
-    await fetch("http://localhost:3000/users", {
+    const response = await fetch("http://localhost:3000/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newUser)
+      body: JSON.stringify({ email, password })
     });
     
     localStorage.setItem("user", JSON.stringify(newUser));
